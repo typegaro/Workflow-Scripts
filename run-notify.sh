@@ -9,6 +9,6 @@ cmd="$1"
 shift
 text="$*"
 
+notify-send "Command" "$text"
 eval "$cmd"
 
-notify-send "Command" "$text"
