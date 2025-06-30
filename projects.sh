@@ -8,6 +8,6 @@ tmux send-keys -t "$base" "nvim \"$path\"" C-m
 
 notify-send "tmux session started" "Session: $base"
 if [ $(tmux ls 2>/dev/null | wc -l) -eq 1 ]; then
-  alacritty -e tmux attach -t "$base" &
+  $TERMINAL -e tmux attach -t "$base" &
 fi
 
